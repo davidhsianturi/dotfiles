@@ -70,7 +70,7 @@ brew tap homebrew/bundle
 brew bundle
 
 # Install global Composer packages.
-packages=( laravel/installer laravel/lumen-installer laravel/spark-installer laravel/valet )
+packages=( laravel/installer laravel/spark-installer laravel/valet tightenco/takeout )
 for package in "${packages[@]}"
 do
   printf "%s- Installing $package...%s"
