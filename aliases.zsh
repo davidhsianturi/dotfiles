@@ -20,6 +20,7 @@ alias art="php artisan"
 alias mfs='art migrate:fresh --seed'
 alias deploy='envoy run deploy'
 alias deploy-code='envoy run deploy-code'
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # Git.
 alias commit="git add . && git commit -m"
