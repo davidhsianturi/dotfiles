@@ -55,12 +55,19 @@ fi
 
 printf "%s\n# Installing apps and dependencies...\n%s" $yellow $end
 
+# Check for Oh My Zsh and install if we don't have it
+printf "%s- Installing Oh My Zsh...\n%s"
+if test ! $(which omz); then
+  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
+fi
+
 # Install Hombrew and additional dependencies with bundle (See Brewfile)
-printf "%s- Installing Homebrew...%s"
-if [[ ! -e "/usr/local/bin/brew" ]]; then
+printf "%s- Installing Homebrew...\n%s"
+if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-else
-  printf "%s already installed \n%s" $cyan $end
+
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 printf "%s- Updating Homebrew recipes... \n%s"
@@ -70,7 +77,7 @@ brew tap homebrew/bundle
 brew bundle
 
 # Install global Composer packages.
-packages=( laravel/installer laravel/spark-installer laravel/valet tightenco/takeout )
+packages=( laravel/installer laravel/valet )
 for package in "${packages[@]}"
 do
   printf "%s- Installing $package...%s"
