@@ -48,7 +48,7 @@ brew "nginx"
 brew "node"
 brew "optipng"
 brew 'php'
-brew "php@8.0", link: true
+brew "php@8.0"
 brew 'php@7.4'
 brew "pngquant"
 brew "redis", restart_service: true
