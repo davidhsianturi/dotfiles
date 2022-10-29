@@ -16,7 +16,9 @@ alias pw="phpunit-watcher watch"
 alias pfresh="rm -rf vendor/ composer.lock && composer i"
 
 # Laravel.
-alias art="php artisan"
+alias art="valet php artisan"
+alias arts="valet composer"
+alias xart="valet which-php"
 alias mfs='art migrate:fresh --seed'
 alias deploy='envoy run deploy'
 alias deploy-code='envoy run deploy-code'
