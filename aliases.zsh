@@ -3,6 +3,7 @@ alias zshrc="code ~/.zshrc"
 alias hostfile="code /etc/hosts/"
 alias sshconfig="code ~/.ssh/config"
 alias sshnew="ssh-keygen -t rsa -b 4096 -C "davidhsianturi@gmail.com""
+alias pstorm="open -a 'phpstorm.app'"
 
 # Change directory.
 alias chub="cd $HOME/Code/github.com/"
