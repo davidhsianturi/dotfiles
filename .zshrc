@@ -96,3 +96,8 @@ eval "$(starship init zsh)"
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/mysql@8.4/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql@8.4/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@8.4/lib/pkgconfig"

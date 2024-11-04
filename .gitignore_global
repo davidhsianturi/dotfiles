@@ -37,3 +37,8 @@ ehthumbs.db
 Thumbs.db
 .idea/
 .vscode
+
+.env.local
+.env.testing
+.task/checksum/env
+.task/checksum/env-testing
