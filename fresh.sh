@@ -46,7 +46,7 @@ if [[ ! -e "$gitlab_dir" ]]; then
   printf "%s Success!\n%s" $green $end
 else
   printf "%s already created\n%s" $cyan $end
-fi 
+fi
 
 
 #-----------------------------------------------------------------------------
@@ -64,7 +64,7 @@ fi
 # Install Hombrew and additional dependencies with bundle (See Brewfile)
 printf "%s- Installing Homebrew...\n%s"
 if test ! $(which brew); then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
