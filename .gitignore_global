@@ -37,7 +37,17 @@ ehthumbs.db
 Thumbs.db
 .idea/
 
-.env.local
-.env.testing
+# Playwright #
+######################
+.playwright
+.playwright-mcp
+
+# Environment files #
+######################
+.env
 .task/checksum/env
 .task/checksum/env-testing
+
+# Claude #
+######################
+.claude/settings.local.json
