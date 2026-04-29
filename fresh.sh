@@ -126,6 +126,12 @@ rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 printf "%s Done!\n%s" $green $end
 
+# Ghostty config.
+printf "%s- Symlink Ghostty config file...%s" $yellow $end
+mkdir -p ~/.config/ghostty
+ln -sf ~/.dotfiles/config/ghostty/config ~/.config/ghostty/config
+printf "%s Done!\n%s" $green $end
+
 # Mackup config.
 printf "%s- Symlink .mackup.cfg file...%s" $yellow $end
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
