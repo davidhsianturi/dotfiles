@@ -58,7 +58,7 @@
       "mcp__laravel-boost__*",
       "mcp__chrome-devtools__*"
     ],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "auto"
   },
   "model": "opus[1m]",
   "statusLine": {
@@ -67,10 +67,34 @@
   },
   "enabledPlugins": {
     "laravel-simplifier@laravel": true,
-    "agent-browser@agent-browser": true
+    "agent-browser@agent-browser": true,
+    "crit@crit": true,
+    "saf@specs-private": true,
+    "laravel@specs": true
   },
-  "extraKnownMarketplaces": {},
+  "extraKnownMarketplaces": {
+    "specs": {
+      "source": {
+        "source": "github",
+        "repo": "specsnl/agent-specs"
+      }
+    },
+    "specs-private": {
+      "source": {
+        "source": "github",
+        "repo": "specsnl/agent-specs-private"
+      }
+    }
+  },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
-  "skipDangerousModePermissionPrompt": true
+  "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "xhigh"
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
+  "theme": "light",
+  "skipAutoPermissionPrompt": true
 }

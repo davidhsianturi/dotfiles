@@ -77,7 +77,7 @@ brew tap homebrew/bundle
 brew bundle
 
 # Install global Composer packages.
-packages=( laravel/installer laravel/valet )
+packages=( laravel/installer laravel/valet laravel/lsp)
 for package in "${packages[@]}"
 do
   printf "%s- Installing $package...%s"
