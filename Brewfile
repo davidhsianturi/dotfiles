@@ -39,8 +39,6 @@ brew "jpeg-xl"
 brew "gd"
 # Postgres C API library
 brew "libpq"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Command-line interface for SQLite
 brew "sqlite"
 # General-purpose scripting language
@@ -95,8 +93,6 @@ brew "graphviz"
 brew "guile"
 # Apache HTTP server
 brew "httpd"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.14"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # C/C++ and Java libraries for Unicode and globalization
@@ -145,6 +141,8 @@ brew "nmap"
 brew "node"
 # Manage multiple Node.js versions
 brew "nvm"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # PNG file optimizer
 brew "optipng"
 # General-purpose scripting language
@@ -161,6 +159,8 @@ brew "poppler"
 brew "postgresql@14"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
 # Tool Command Language
 brew "tcl-tk"
 # Interpreted, interactive, object-oriented programming language
@@ -206,7 +206,7 @@ cask "claude-code"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # Menu bar usage monitor for Codex and Claude
-cask "steipete/tap/codexbar"
+cask "steipete/tap/codexbar", trusted: true
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
 # Voice and text chat software
@@ -237,8 +237,8 @@ cask "screenkite"
 cask "specsnl/tap/specs", trusted: true
 # Native GUI tool for relational databases
 cask "tableplus"
-# Tiny, fully native launcher, hotkeys, and clipboard history
-cask "abue-ammar/tinycast/tinycast", trusted: true
+# Application launcher and productivity tool
+cask "tinycast"
 # Open-source code editor
 cask "visual-studio-code"
 # Rust-based terminal
